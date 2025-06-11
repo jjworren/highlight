@@ -11,7 +11,7 @@ services:
             - ../backend/localhostssl/server.crt:/build/localhostssl/server.crt
         env_file: .env
         ports:
-            - '0.0.0.0:8082:8082'
+            - 8082
         container_name: backend
         healthcheck:
             test:
@@ -111,9 +111,9 @@ services:
             - ../backend/localhostssl/server.key:/etc/ssl/private/ssl-cert.key
             - ../backend/localhostssl/server.pem:/etc/ssl/certs/ssl-cert.pem
         ports:
-            - '0.0.0.0:3000:3000'
-            - '0.0.0.0:6006:6006'
-            - '0.0.0.0:8080:8080'
+            - 3000
+            - 6006
+            - 8080
         env_file: .env
 
 volumes:
